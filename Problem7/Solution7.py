@@ -1,17 +1,22 @@
+# Skipped check of first two primes, 2 and 3
+counter = 5
+otherCounter = 3
 primeCounter = 0
-isPrime = False
-keepLooking = True
-counter = 3
-otherCounter = 2
 
-while(keepLooking):
+while(True):
 	while(otherCounter < counter):
-		if(counter % otherCounter == 0)
+		if(counter % otherCounter == 0):
 			break
-		elif(o)
-		otherCounter += 1
+		elif((otherCounter == counter - 2) and (counter  % otherCounter != 0)):
+			primeCounter += 1
+			break
+		otherCounter += 2 #No use having even divisors!
 		
-	if (primeCounter == 10001):
-		keepLooking = False
+	if (primeCounter == 9999): # Only going to 9999 because I skipped first two primes
+		break
+		
+	otherCounter = 3
+	counter += 2 # No use checking even dividends!
 	
-	counter += 2
+print("Prime counter: " + str(primeCounter))
+print("Prime number is: " + str(counter))
